@@ -1,0 +1,350 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            background-color: #555;
+            color: #ddd;
+        }
+
+        .nav-links li a.active {
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        main {
+            padding-top: 60px;
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .hero {
+            background-color: #eee;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        .about-section .container,
+        .contact-section .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .about-content,
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .about-image,
+        .contact-image {
+            flex: 1 1 300px;
+            text-align: center;
+        }
+
+        .about-image img,
+        .contact-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .about-text,
+        .contact-info {
+            flex: 2 1 400px;
+            text-align: left;
+        }
+
+        .contact-info h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        .contact-info p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #0056b3;
+        }
+
+        .services-section {
+            background-color: #eee;
+        }
+
+        .portfolio-section {
+            background-color: #fff;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .main-nav {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px 20px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .nav-links li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .nav-links li a {
+                display: block;
+                padding: 10px;
+                text-align: center;
+                border-bottom: 1px solid #555;
+            }
+
+            .nav-links li a:last-child {
+                border-bottom: none;
+            }
+
+            .about-content,
+            .contact-details {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .about-image,
+            .contact-image {
+                margin-bottom: 20px;
+            }
+
+            .about-text,
+            .contact-info {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">Your Logo</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Our Landing Page</h1>
+                <p>Your catchy tagline goes here.</p>
+                <a href="#" class="cta-button">Learn More</a>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Us</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="C:\Users\harshini\Desktop\HTML\business.avif" alt="Our Team" width="300">
+                    </div>
+                    <div class="about-text">
+                        <p>This is where you'll add detailed information about your company, team, or yourself. You can talk about your mission, values, history, and what makes you unique.</p>
+                        <p>Feel free to include multiple paragraphs and highlight key achievements or milestones.</p>
+                        <ul>
+                            <li>Our Mission: To provide excellent services...</li>
+                            <li>Our Vision: To become a leader in...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-details">
+                    <div class="contact-info">
+                        <h3>Our Location:</h3>
+                        <p>123 Main Street, Coimbatore, Tamil Nadu</p>
+                        <h3>Email:</h3>
+                        <p><a href="mailto:info@example.com">info@example.com</a></p>
+                        <h3>Phone:</h3>
+                        <p>+91 9876543210</p>
+                    </div>
+                    <div class="contact-image">
+                        
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <h2>Our Services</h2>
+            <p>Briefly describe the services you offer.</p>
+            </section>
+
+        <section id="portfolio" class="portfolio-section">
+            <h2>Portfolio</h2>
+            <p>Showcase your work here.</p>
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Company</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-links li a');
+            const sections = document.querySelectorAll('section');
+            const header = document.querySelector('header');
+            const nav = document.querySelector('.main-nav');
+
+            function setActiveLink() {
+                let currentSection = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    if (pageYOffset >= sectionTop - header.offsetHeight && pageYOffset < sectionTop + sectionHeight - header.offsetHeight) {
+                        currentSection = section.id;
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(currentSection)) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            function handleScroll() {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                setActiveLink();
+            }
+
+            window.addEventListener('scroll', handleScroll);
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - header.offsetHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
+      
